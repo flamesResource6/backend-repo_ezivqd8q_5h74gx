@@ -12,9 +12,29 @@ Model name is converted to lowercase for the collection name:
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 
-# Example schemas (replace with your own):
+# -------------------- Notepad App Schemas --------------------
+
+class Folder(BaseModel):
+    """Folders collection schema
+    Collection name: "folder"
+    """
+    name: str = Field(..., description="Folder name")
+    color: Optional[str] = Field(None, description="Hex color or Tailwind color name")
+    icon: Optional[str] = Field(None, description="Icon name for UI")
+
+class Note(BaseModel):
+    """Notes collection schema
+    Collection name: "note"
+    """
+    title: str = Field("Untitled", description="Note title")
+    content: str = Field("", description="Note content (Markdown/plain text)")
+    folder_id: Optional[str] = Field(None, description="Associated folder id as string")
+    tags: Optional[List[str]] = Field(default_factory=list, description="Tags for filtering")
+    pinned: bool = Field(False, description="Pinned to top")
+
+# Example schemas (kept for reference):
 
 class User(BaseModel):
     """
@@ -38,7 +58,6 @@ class Product(BaseModel):
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
 
-# Add your own schemas here:
 # --------------------------------------------------
 
 # Note: The Flames database viewer will automatically:

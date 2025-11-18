@@ -1,0 +1,21 @@
+INFO:     Will watch for changes in these directories: ['/home/workspace']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [152] using StatReload
+INFO:     Started server process [154]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     172.20.0.1:38364 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:49438 - "GET /api/folders HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49434 - "GET /api/notes HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49438 - "GET /api/notes HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49434 - "GET /api/folders HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49450 - "OPTIONS /api/notes HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49450 - "POST /api/notes HTTP/1.1" 200 OK
+INFO:     172.20.0.1:49450 - "GET /api/notes HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38852 - "GET /api/folders HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38862 - "OPTIONS /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38862 - "PATCH /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
+INFO:     172.20.0.1:38862 - "PATCH /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
+INFO:     172.20.0.1:52710 - "PATCH /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
+INFO:     172.20.0.1:52710 - "PATCH /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
+INFO:     172.20.0.1:52726 - "PATCH /api/notes/691c73a8e9aeddd81cbe056d HTTP/1.1" 200 OK
